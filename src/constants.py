@@ -14,6 +14,9 @@ MU_EARTH = 3.986004418e14
 # Earth's equatorial radius (m), WGS84
 R_EARTH = 6_378_137.0
 
+# WGS84 Earth flattening (dimensionless)
+WGS84_FLATTENING = 1.0 / 298.257223563
+
 # Earth's second zonal harmonic coefficient (dimensionless)
 J2_EARTH = 1.08262668e-3
 
