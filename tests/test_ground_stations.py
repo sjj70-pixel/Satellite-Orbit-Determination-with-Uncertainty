@@ -1,4 +1,4 @@
-"""Tests for rotating, spherical-Earth ground-station geometry."""
+"""Tests for rotating, elliptical-Earth ground-station geometry."""
 
 import numpy as np
 import pytest
