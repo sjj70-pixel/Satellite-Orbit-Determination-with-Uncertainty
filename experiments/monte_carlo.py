@@ -540,7 +540,7 @@ def main():
     )
     options = parser.parse_args()
     if options.quick:
-        print("QUICK CHECK: too few seeds for resume claims.", flush=True)
+        print("QUICK CHECK.", flush=True)
     run_study(
         calibration_seeds=CALIBRATION_SEEDS[:2] if options.quick else CALIBRATION_SEEDS,
         validation_seeds=VALIDATION_SEEDS[:3] if options.quick else VALIDATION_SEEDS,
