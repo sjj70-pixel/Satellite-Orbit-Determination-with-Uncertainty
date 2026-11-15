@@ -72,14 +72,14 @@ def test_forecast_rmse_and_nees():
     assert scores["predicted_position_scale_24h_m"] == pytest.approx(np.sqrt(3))
 
 
-def test_select_psd_uses_mean_and_prefers_lower_psd_on_tie():
+def test_select_psd_penalizes_variability():
     rows = [
         {"acceleration_psd": 1e-10, "forecast_position_rmse_m": 2.0},
         {"acceleration_psd": 1e-10, "forecast_position_rmse_m": 4.0},
         {"acceleration_psd": 1e-9, "forecast_position_rmse_m": 3.0},
         {"acceleration_psd": 1e-9, "forecast_position_rmse_m": 3.0},
     ]
-    assert select_psd(rows) == 1e-10
+    assert select_psd(rows) == 1e-9
 
 
 def test_summary_contains_only_correct_scenario_and_estimator():

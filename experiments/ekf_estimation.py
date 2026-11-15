@@ -1,14 +1,10 @@
-"""Run an Extended Kalman Filter on a 24-hour satellite-tracking simulation.
+"""To match the batch least-squares baseline, the EKF uses observations
+from only the first 12 hours. The remaining 12 hours are withheld for
+forecasting, although ground-station visibility is still displayed.
 
-Run from the project root:
-    python -m experiments.ekf_estimation
-
-For a fair forecast comparison with our batch least-squares experiment, only
-observations in the FIRST 12 hours reach the EKF. The other 12 hours are held
-out, although we show when observations would have been available.
-
-Truth and filter currently share the two-body + J2 model. Atmospheric drag
-will be introduced into truth (but not into the estimators) in a later study.
+Truth and estimator both use two-body + J2 dynamics in this baseline.
+The effects of unmodeled atmospheric drag are examined separately in
+drag_comparison.py and monte_carlo.py.
 """
 
 from pathlib import Path

@@ -1,13 +1,10 @@
-"""Evaluate batch least-squares orbit determination on synthetic tracking data.
+"""Observations from the first 12 hours of a 24-hour simulation are used
+to estimate the orbit. The remaining 12 hours are withheld to evaluate
+forecast accuracy.
 
-Run from the project root:
-    python -m experiments.baseline_estimation
-
-We fit only observations from the first 12 hours of a 24-hour simulation.
-The final 12 hours are withheld to test the estimated orbit's forecast.
-Both truth and estimator use two-body + J2 dynamics in this baseline test;
-future experiments will introduce unmodeled drag into the truth dynamics.
-"""
+Both truth and estimator use two-body + J2 dynamics in this baseline.
+The effect of unmodeled atmospheric drag is examined separately in
+drag_comparison.py and monte_carlo.py."""
 
 from pathlib import Path
 

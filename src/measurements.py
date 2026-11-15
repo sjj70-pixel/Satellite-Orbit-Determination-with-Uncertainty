@@ -19,8 +19,9 @@ from .ground_stations import GroundStation
 class TrackingMeasurement:
     """One noisy observation from a ground station.
 
-    The standard deviations are stored alongside the observations so that
-    future estimators can construct the measurement-noise covariance.
+    The standard deviations are stored with each observation so that
+    batch least squares can weight its residuals and the EKF can construct
+    the measurement-noise covariance.
     """
 
     time_s: float

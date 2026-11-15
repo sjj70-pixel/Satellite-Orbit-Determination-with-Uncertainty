@@ -23,15 +23,17 @@ class GroundStation:
     name : str
         Station identifier.
     latitude_deg : float
-        Geocentric latitude in degrees (-90 to 90).
+        Geodetic latitude in degrees (-90 to 90).
     longitude_deg : float
         East-positive longitude in degrees (-180 to 180).
     min_elevation_deg : float
         Minimum observable satellite elevation in degrees (0 to 90).
+    altitude_m : float
+        Height above the WGS84 ellipsoid in meters.
 
-    The ECI x-axis is aligned with longitude 0 at t=0. A real dated
-    Earth-fixed-to-inertial transformation would need an epoch and Earth
-    orientation model; geodetic latitude would also require an ellipsoid.
+    The ECI x-axis is aligned with longitude 0 at t=0.
+    A real Earth-fixed-to-inertial transformation would also require
+    an epoch and an Earth-orientation model.
     """
 
     name: str
