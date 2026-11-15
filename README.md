@@ -38,9 +38,9 @@ The two plots below show how model mismatch affects forecasting and why the proc
 The six-component Earth-centered inertial (ECI) state is
 
 $$
-\mathbf{x}=\begin{bmatrix}\mathbf{r}\\\mathbf{v}\end{bmatrix},
+\mathbf{x}=\begin{bmatrix}\mathbf{r}\\ \mathbf{v}\end{bmatrix},
 \qquad
-\dot{\mathbf{x}}=\begin{bmatrix}\mathbf{v}\\\mathbf{a}(\mathbf{r},\mathbf{v})\end{bmatrix}.
+\dot{\mathbf{x}}=\begin{bmatrix}\mathbf{v}\\ \mathbf{a}(\mathbf{r},\mathbf{v})\end{bmatrix}.
 $$
 
 The estimator's acceleration model is two-body gravity plus Earth's J2 perturbation:
