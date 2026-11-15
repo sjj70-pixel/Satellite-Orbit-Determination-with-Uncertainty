@@ -16,7 +16,7 @@ from .constants import OMEGA_EARTH, R_EARTH, WGS84_FLATTENING
 
 @dataclass(frozen=True)
 class GroundStation:
-    """An idealized tracking station on the surface of a spherical Earth.
+    """An idealized tracking station on the surface of the WGS84 ellipsoid.
 
     Parameters
     ----------

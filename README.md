@@ -4,7 +4,7 @@ This project compares two methods for estimating a satellite's orbit from interm
 
 The simulator follows a low-Earth-orbit satellite for 24 hours. Three ground stations measure its range and range rate whenever it is above their elevation masks. The first 12 hours of observations are used to estimate the orbit; both methods then predict the next 12 hours without new measurements.
 
-There are two versions of the simulated orbit: gravity with J2, and gravity with J2 plus atmospheric drag. **Both estimators always use the gravity + J2 model.** This makes it possible to separate errors from noisy observations from errors caused by missing physics.
+There are two versions of the simulated orbit: gravity with J2, and gravity with J2 plus atmospheric drag. Both estimators always use the gravity + J2 model. This makes it possible to separate errors from noisy observations from errors caused by missing physics.
 
 ## Simulation
 
